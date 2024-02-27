@@ -75,7 +75,7 @@ export const CustomerCards = () => {
               <div className='card-container'>
                 <div className='customer-block'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/customer-photo.svg'
+                    src='https://i.ibb.co/Z26Ldcm/user-photo.jpg'
                     className='customer-block__photo'
                   ></img>
                   <div className='bio--wrapper'>
@@ -87,7 +87,7 @@ export const CustomerCards = () => {
                 </div>
                 <div className='commas-container'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/commas.svg'
+                    src='https://i.ibb.co/m5gLXQQ/commas.jpg'
                     className='commas'
                   ></img>
                 </div>
@@ -106,7 +106,7 @@ export const CustomerCards = () => {
               <div className='card-container'>
                 <div className='customer-block'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/customer-photo.svg'
+                    src='https://i.ibb.co/Z26Ldcm/user-photo.jpg'
                     className='customer-block__photo'
                   ></img>
                   <div className='bio--wrapper'>
@@ -118,7 +118,7 @@ export const CustomerCards = () => {
                 </div>
                 <div className='commas-container'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/commas.svg'
+                    src='https://i.ibb.co/m5gLXQQ/commas.jpg'
                     className='commas'
                   ></img>
                 </div>
@@ -137,7 +137,7 @@ export const CustomerCards = () => {
               <div className='card-container'>
                 <div className='customer-block'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/customer-photo.svg'
+                    src='https://i.ibb.co/Z26Ldcm/user-photo.jpg'
                     className='customer-block__photo'
                   ></img>
                   <div className='bio--wrapper'>
@@ -149,7 +149,7 @@ export const CustomerCards = () => {
                 </div>
                 <div className='commas-container'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/commas.svg'
+                    src='https://i.ibb.co/m5gLXQQ/commas.jpg'
                     className='commas'
                   ></img>
                 </div>
@@ -168,7 +168,7 @@ export const CustomerCards = () => {
               <div className='card-container'>
                 <div className='customer-block'>
                   <img
-                    src='../../../qp-front-end-task/src/images/content/customer-photo.svg'
+                    src='https://i.ibb.co/Z26Ldcm/user-photo.jpg'
                     className='customer-block__photo'
                   ></img>
                   <div className='bio--wrapper'>
@@ -181,7 +181,7 @@ export const CustomerCards = () => {
                 <div className='content-wrapper'>
                   <div className='commas-container'>
                     <img
-                      src='../../../qp-front-end-task/src/images/content/commas.svg'
+                      src='https://i.ibb.co/m5gLXQQ/commas.jpg'
                       className='commas'
                     ></img>
                   </div>

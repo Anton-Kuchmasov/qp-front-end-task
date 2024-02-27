@@ -81,7 +81,7 @@ export const Header = () => {
             </div>
 
           <img
-            src='../../../qp-front-end-task/src/images/content/header-blocks.svg'
+            src='https://i.ibb.co/CPZN2mK/blocks2.png'
             alt='Blocks'
             className='header__image'
           />
