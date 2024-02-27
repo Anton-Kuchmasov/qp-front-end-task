@@ -21,6 +21,10 @@
 
   color: $gray-headers;
 
+  @include onTablet {
+   gap: 25px;
+  }
+
 }
 
 .customer-block {
@@ -28,6 +32,8 @@
 
   @include onTablet {
     margin-top: 48px;
+    padding-left: 40px;
+    margin-bottom: 20px;
   }
 
   @include onDesktop {
@@ -54,6 +60,10 @@
     @include museo-sans(24px, 28.8px);
 
     text-align: left;
+
+    @include onTablet {
+      padding-inline: 30px;
+    }
   }
 }
 
@@ -160,7 +170,7 @@
 
     @include onTablet {
       position: absolute;
-      right: 90%;
+      right: 0;
       top: 50%;
 
       z-index: 2;
@@ -168,6 +178,7 @@
 
     @include onDesktop {
       position: absolute;
+      left: 70px;
       top: 200px;
     }
 
@@ -175,6 +186,11 @@
 }
 
 .commas {
+  @include onTablet {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+  }
   @include onDesktop {
     display: none;
   }

@@ -14,11 +14,12 @@
   background-color: $white;
 
   @include onDesktop {
+    padding-bottom: 32px;
     flex-direction: row;
   }
 
   &__top {
-    @include onTablet {
+    @include onDesktop {
       @include flex-container(row, 54px);
       grid-column: span 2;
     }
@@ -27,6 +28,7 @@
   &__info {
     @include onTablet {
       grid-column: 2 / span 6;
+      margin-top: 40px;
     }
 
     @include onDesktop {
@@ -35,13 +37,6 @@
   }
 
   &__wrapper {
-
-      @include onTablet {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-
-        gap: 40px;
-      }
 
       @include onDesktop {
         display: grid;
@@ -59,7 +54,12 @@
 
     margin: 0 auto;
 
+    @include onTablet {
+      grid-column: 1 / 1;
+    }
+
     @include onDesktop {
+      // display: inline-block;
       justify-content: start;
       margin: 0;
     }
@@ -86,11 +86,14 @@
       padding: 0;
 
       @include onTablet {
+        margin-top: 54px;
         flex-direction: row;
         justify-content: space-between;
       }
 
       @include onDesktop {
+        margin-top: 0;
+        gap: 24px;
         flex-direction: column;
       }
 
@@ -133,7 +136,12 @@
     &--wrapper {
       @include flex-container(column, 24px);
 
+      @include onTablet {
+        padding-inline: 130px;
+      }
+
       @include onDesktop {
+        padding-inline: 0;
         flex-direction: row;
         grid-column: 3 / span 8;
       }
@@ -142,7 +150,10 @@
     &--card {
       @include flex-container(column, 16px);
 
+      margin-top: 32px;
+
       @include onDesktop {
+        margin-top: 0;
         grid-column: span 4;
         justify-content: start;
         align-items: flex-start;
@@ -160,6 +171,8 @@
       @include flex-container(column, 16px);
       
       justify-content: center;
+
+      margin-top: 32px;
 
       list-style-type: none;
       @include montserrat-400(16px, 27px);

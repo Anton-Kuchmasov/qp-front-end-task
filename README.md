@@ -1,8 +1,13 @@
-# React + Vite
+# MetaTrader4 Landing Page
+In this project I implemented a pixel-perfect responsive Landing Page for Traders
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies I used here: 
+- HTML;
+- CSS;
+- SCSS;
+- JavaScript;
+- React.js.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Obioviosly, you can easily add or change any data in my application.
+You can use raw array, API or even JSON to add some info (user reviews, step-by-step info for new users etc.)
+Made sincerly by heart :)
