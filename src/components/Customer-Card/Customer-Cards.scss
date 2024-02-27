@@ -16,13 +16,11 @@
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-container(column, 5px);
   align-items: flex-start;
 
   color: $gray-headers;
 
-  gap: 5px;
 }
 
 .customer-block {
@@ -38,15 +36,11 @@
   }
 
   &__name {
-    @include museo-sans();
-    font-size: 18px;
-    line-height: 30px;
+    @include museo-sans(18px, 30px);
   }
 
   &__profession {
-    @include montserrat-400();
-    font-size: 16px;
-    line-height: 27px;
+    @include montserrat-400(16px, 27px);
     text-align: center;
 
     opacity: 70%;
@@ -57,17 +51,14 @@
 
 .review-block {
   &__text {
-    @include museo-sans();
-    font-size: 24px;
-    line-height: 28.8px;
+    @include museo-sans(24px, 28.8px);
 
     text-align: left;
   }
 }
 
 .navigation-block {
-  display: flex;
-  flex-direction: row;
+  @include flex-container(row);
 
   align-items: center;
 
@@ -83,9 +74,7 @@
     display: none;
 
     @include onDesktop {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
+      @include flex-container(row, 20px);
     }
   }
 
@@ -94,9 +83,7 @@
   }
 
   &__pagination-counter {
-    @include museo-sans();
-    font-size: 15px;
-    line-height: 18px;
+    @include museo-sans(15px, 18px);
     color: $violet-bgc;
 
     @include onTablet {

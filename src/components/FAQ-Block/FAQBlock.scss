@@ -24,10 +24,9 @@
   }
 
   &__cards-container {
+    @include flex-container(column, 16px);
+
     margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 
     @include onTablet {
       margin-top: 48px;

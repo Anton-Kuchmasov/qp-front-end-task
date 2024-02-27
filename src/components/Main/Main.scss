@@ -7,9 +7,7 @@
   background-color: $white;
   padding-top: 80px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  @include flex-container(column, 80px);
 
   @include onTablet {
    gap: 120px;
@@ -27,8 +25,7 @@
     line-height: 44px;
 
     @include onTablet {
-      font-size: 56px;
-      line-height: 66px;
+      
     }
 
     &--important {
@@ -65,9 +62,7 @@
   &__cards-container {
     margin: 32px auto 0;
 
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    @include flex-container(column, 24px);
 
     justify-content: center;
 
@@ -113,9 +108,7 @@
   &--wrapper {
     @include inline-padding();
 
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    @include flex-container(column, 24px);
     align-items: center;
 
     @include onTablet {
@@ -141,17 +134,13 @@
   }
 
   &__info {
-    @include montserrat-400();
-    font-size: 18px;
-    line-height: 30px;
+    @include montserrat-400(18px, 30px);
 
     text-align: left;
   }
 
   &__credentials {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    @include flex-container(column, 8px);
 
     &--header {
       @include museo-sans();
@@ -162,40 +151,29 @@
     }
 
     &--contacts {
-      @include montserrat-400();
-      font-size: 16px;
-      line-height: 27px;
+      @include montserrat-400(16px, 27px);
 
       text-align: left;
     }
   }
 
   &__contacts-wrapper {
-    @include montserrat-400();
-    font-size: 16px;
-    line-height: 27px;
+    @include montserrat-400(16px, 27px);
 
     text-align: left;
 
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
+    @include flex-container(column, 16px);
   }
 }
 
 .contacts-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  @include flex-container(column, 16px);
 }
 
 .contacts-wrapper {
   @include violet-layout(0.08);
 
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  @include flex-container(column, 48px);
 
   padding-block: 48px;
 

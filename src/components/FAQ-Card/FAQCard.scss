@@ -3,10 +3,7 @@
 @import '../../utils/vars.scss';
 
 .FAQCard {
-  display: flex;
-  flex-direction: column;
-
-  gap: 24px;
+  @include flex-container(column, 24px);
 
   border: 2px solid $violet-button;
   border-radius: 15px;
@@ -28,9 +25,8 @@
   }
 
   &--wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 27px;
+    @include flex-container(row, 27px);
+
     align-items: center;
 
     justify-content: space-between;
@@ -42,9 +38,7 @@
   }
 
   &__description {
-    @include montserrat-400();
-    font-size: 16px;
-    line-height: 27px;
+    @include montserrat-400(16px, 27px);
     color: $gray-main-text;
 
     text-align: left;

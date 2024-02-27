@@ -22,11 +22,21 @@
   color: $gray-headers;
 }
 
-@mixin museo-sans {
+@mixin museo-sans($font-size: 18px, $line-height: 30px) {
   font-family: 'MuseoSans-500', sans-serif;
   font-weight: bold;
   color: $gray-headers;
+
+  font-size: $font-size;
+  line-height: $line-height;
 }
+
+@mixin flex-container($direction: column, $gap: 16px) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
 
 @mixin inline-padding {
   padding-inline: 20px;
@@ -40,15 +50,16 @@
   }
 }
 
-@mixin montserrat-400 {
+@mixin montserrat-400($font-size: 18px, $line-height: 30px) {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 
-  font-size: 18px;
-  line-height: 30px;
+  font-size: $font-size;
+  line-height: $line-height;
 
   color: $gray-main-text;
 }
+
 
 @mixin violet-layout($opacity: 0.1) {
   background-color: rgba($violet-bgc, $opacity);
