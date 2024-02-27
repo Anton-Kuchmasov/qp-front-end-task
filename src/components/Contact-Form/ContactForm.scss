@@ -1,0 +1,82 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/normalize.scss';
+@import '../../utils/vars.scss';
+
+.callback {
+  @include inline-padding();
+
+  &__form {
+    border: 2px solid $violet-bgc;
+    border-radius: 20px;
+
+    background-color: $white;
+
+    padding: 48px 16px;
+  }
+}
+
+.text-input {
+  height: 40px;
+  width: 100%;
+
+  padding-inline: 16px 0px;
+  padding-block: 0;
+  align-items: center;
+
+  @include montserrat-400();
+  font-size: 16px;
+  line-height: 26px;
+
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+
+  &:focus {
+    border: 1px solid $dark-gray;
+  }
+
+  &--correct {
+    border: 1px solid #0EAC00;
+  }
+
+  &--error {
+    border: 1px solid #EB5757;
+  }
+
+  &--textarea {
+    height: 89px;
+
+    @include montserrat-400();
+    font-size: 16px;
+    line-height: 26px;
+  
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+
+    padding-inline: 16px 0px;
+    padding-block: 7px 0;
+    align-items: center;
+  }
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button__send {
+  margin: 0;
+  max-width: 172px;
+}
+
+.error-message {
+  @include museo-sans();
+  font-size: 15px;
+  line-height: 16px;
+
+  text-align: left;
+
+  margin-top: 8px;
+
+  color: #EB5757;
+}

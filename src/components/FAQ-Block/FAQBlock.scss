@@ -1,0 +1,41 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/normalize.scss';
+@import '../../utils/vars.scss';
+
+.faq-block {
+  @include inline-padding();
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__header {
+    @include headers-style();
+    font-size: 40px;
+    line-height: 44px;
+    text-align: left;
+
+    @include onDesktop {
+      grid-column: 1 / span 5;
+      font-size: 56px;
+      line-height: 66px;
+    }
+  }
+
+  &__cards-container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onTablet {
+      margin-top: 48px;
+    }
+
+    @include onDesktop {
+      margin-top: 60px;
+      grid-column: 2 / span 10;
+    }
+  }
+}

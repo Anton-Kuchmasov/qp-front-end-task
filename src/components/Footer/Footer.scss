@@ -1,0 +1,255 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/normalize.scss';
+@import '../../utils/vars.scss';
+
+.footer {
+  @include inline-padding();
+  padding-block: 32px;
+  @include onTablet {
+    padding-block: 48px;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+
+  background-color: $white;
+
+  @include onDesktop {
+    flex-direction: row;
+  }
+
+  &__top {
+    @include onTablet {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 54px;
+    }
+  }
+
+  &__info {
+    @include onTablet {
+      grid-column: 2 / span 6;
+    }
+
+    @include onDesktop {
+      grid-column: span 10;
+    }
+  }
+
+  &__wrapper {
+
+      @include onTablet {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+
+        gap: 40px;
+      }
+
+      @include onDesktop {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+  }
+
+  &__logo {
+    display: flex;
+    height: 44px;
+    width: 126px;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    @include onDesktop {
+      justify-content: start;
+      margin: 0;
+    }
+
+    &--text {
+      @include museo-sans();
+
+    }
+  }
+
+  &__nav {
+    @include museo-sans();
+    text-align: left;
+
+    @include onDesktop {
+      display: none;
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+  
+      list-style-type: none;
+  
+      padding: 0;
+
+      @include onTablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include onDesktop {
+        flex-direction: column;
+      }
+
+
+    }
+  }
+
+  &__nav--onDesktop {
+    @include museo-sans();
+    text-align: left;
+
+    display: none;
+
+    @include onDesktop {
+      grid-column: 11 / 12;
+      display: block;
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  
+      list-style-type: none;
+  
+      padding: 0;
+
+      @include onTablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include onDesktop {
+        flex-direction: column;
+      }
+
+
+    }
+  }
+
+  &__terms {
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+
+      gap: 24px;
+
+      @include onDesktop {
+        flex-direction: row;
+        grid-column: 3 / span 8;
+      }
+    }
+
+    &--card {
+      display: flex;
+      flex-direction: column;
+
+      gap: 16px;
+
+      @include onDesktop {
+        grid-column: span 4;
+        justify-content: start;
+        align-items: flex-start;
+      }
+
+    }
+  }
+
+  &__credentials {
+    
+    @include onDesktop {
+      display: none;
+    }
+    &__list {
+
+      
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: center;
+      gap: 16px;
+
+      list-style-type: none;
+      @include montserrat-400;
+      font-size: 16px;
+      line-height: 27px;
+      color: $dark-gray;
+
+      padding: 0;
+
+      li:first-child {
+        white-space: nowrap;
+      }
+
+      @include onTablet {
+        margin-top: 40px;
+      }
+
+      @include onDesktop {
+       flex-direction: row;
+        gap: 66px;
+        justify-content: space-between;
+      }
+
+    }
+  }
+  
+}
+
+.term {
+  &__header {
+    @include museo-sans();
+    font-style: 18px;
+    line-height: 30px;
+
+    text-align: left;
+
+    @include onTablet {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include montserrat-400();
+    font-size: 16px;
+    line-height: 27px;
+
+    text-align: left;
+
+    @include onTablet {
+      text-align: center;
+    }
+    
+    @include onDesktop {
+      text-align: left;
+    }
+  }
+}
+
+.footer__credentials--onPC {
+  display: none;
+
+  @include onDesktop {
+    grid-column: span 12;
+    display: flex;
+
+    li {
+      &:first-child {
+        margin-right: 66px;
+      }
+    }
+  }
+
+  
+}

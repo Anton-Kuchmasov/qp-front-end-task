@@ -1,0 +1,113 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import './vars.scss';
+@import './mixins.scss';
+@import url('https://db.onlinewebfonts.com/c/16697a764b01cdcc691b05f001046bc3?family=MuseoSans-500');
+
+@font-face {
+  font-family: 'MuseoSans-500';
+  src: url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot');
+  src:
+    url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.svg#MuseoSans-500')
+      format('svg');
+}
+
+@font-face {
+  font-family: 'Museo Sans 500 Medium';
+  src: url('../fonts/museo-sans/MuseoSansCyrl-500.eot');
+  src:
+    url('../fonts/museo-sans/MuseoSansCyrl-500.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/museo-sans/MuseoSansCyrl-500.woff') format('woff'),
+    url('../fonts/museo-sans/MuseoSansCyrl-500.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrillic 500';
+  src: url('../fonts/MuseoSansCyrillic-500.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrillic 700';
+  src: url('../fonts/MuseoSansCyrillic-700.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+#root {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.button {
+  width: 280px;
+  padding-block: 20px;
+  margin-top: 32px;
+
+  @include headers-style();
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: normal;
+
+  &__trading {
+    @include onTablet {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+    @include onDesktop {
+      align-self: flex-start !important;
+    }
+  }
+
+  color: $white;
+  cursor: pointer;
+
+  border-radius: 60px;
+  background-color: $violet-button;
+  border: none;
+
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #7181FC;
+  }
+
+  &:focus {
+    background-color: #354BF4;
+  }
+
+  &:disabled {
+    background-color: $light-gray;
+    color: $dark-gray;
+  }
+}

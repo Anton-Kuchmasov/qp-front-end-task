@@ -1,0 +1,68 @@
+@import './vars.scss';
+
+@mixin main-text-style {
+  @include montserrat-400();
+}
+
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin headers-style {
+  font-family: 'MuseoSans-500', sans-serif;
+  font-weight: bold;
+  color: $gray-headers;
+}
+
+@mixin museo-sans {
+  font-family: 'MuseoSans-500', sans-serif;
+  font-weight: bold;
+  color: $gray-headers;
+}
+
+@mixin inline-padding {
+  padding-inline: 20px;
+
+  @include onTablet() {
+    padding-inline: 40px;
+  }
+
+  @include onDesktop() {
+    padding-inline: 120px;
+  }
+}
+
+@mixin montserrat-400 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  color: $gray-main-text;
+}
+
+@mixin violet-layout($opacity: 0.1) {
+  background-color: rgba($violet-bgc, $opacity);
+}
+
+@mixin has-highlight {
+  &::before {
+    position: absolute;
+    @include violet-layout();
+    width: 100%;
+    display: block;
+    height: calc(100% + 8px);
+    content: '';
+    top: 0;
+    left: 0;
+  }
+}

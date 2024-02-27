@@ -1,0 +1,196 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/normalize.scss';
+@import '../../utils/vars.scss';
+
+.main--wrapper {
+  position: relative;
+}
+
+.wrapper {
+  @include onDesktop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: $gray-headers;
+
+  gap: 5px;
+}
+
+.customer-block {
+  margin-top: 32px;
+
+  @include onTablet {
+    margin-top: 48px;
+  }
+
+  @include onDesktop {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__name {
+    @include museo-sans();
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__profession {
+    @include montserrat-400();
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+
+    opacity: 70%;
+
+    color: $gray-headers;
+  }
+}
+
+.review-block {
+  &__text {
+    @include museo-sans();
+    font-size: 24px;
+    line-height: 28.8px;
+
+    text-align: left;
+  }
+}
+
+.navigation-block {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  width: 100%;
+
+  justify-content: space-between;
+
+  @include onTablet {
+    justify-content: center;
+  }
+
+  &--forPC {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  @include onDesktop {
+    display: none;
+  }
+
+  &__pagination-counter {
+    @include museo-sans();
+    font-size: 15px;
+    line-height: 18px;
+    color: $violet-bgc;
+
+    @include onTablet {
+      margin-top: 32px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+    }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.swipe {
+  margin-top: 0;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 1px #e0e0e0 solid;
+
+  background-color: $white;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+
+  &:active {
+    border: 1px $violet-bgc solid;
+  }
+
+  &--left {
+    background-image: url('../../images/icons/arrow-left.svg');
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    @include onTablet {
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      z-index: 2;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 200px;
+    }
+  }
+
+  &--right {
+    background-image: url('../../images/icons/arrow-right.svg');
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    @include onTablet {
+      position: absolute;
+      right: 90%;
+      top: 50%;
+
+      z-index: 2;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 200px;
+    }
+
+  }
+}
+
+.commas {
+  @include onDesktop {
+    display: none;
+  }
+}
+
+

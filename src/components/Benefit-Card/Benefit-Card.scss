@@ -1,0 +1,103 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.benefit-card {
+  position: relative;
+  display: block;
+  padding: 24px;
+
+  @include onTablet {
+    padding: 32px;
+
+    &:nth-child(odd) {
+      grid-column: 1 / span 4;
+    }
+
+    &:nth-child(even) {
+      margin-top: 116px;
+      grid-column: 5 / span 4;
+    }
+
+    height: min-content;
+
+    // &:nth-child(2) { I couldn't done this, tried to do it, but it didn't work as expected
+    //   margin-top: 93px;
+    // }
+
+    // &:nth-child(odd) {
+    //   grid-column: span 4;
+    //   &:before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 80%;
+    //     height: 50%;
+    //     border: 2px dotted $violet-bgc; // Цвет и стиль границы карточки
+    //     border-top-right-radius: 30px;
+    //     top: 50%;
+    //     left: 141%;
+    //     transform: translate(-50%, -50%);
+    //     border-bottom-style: none;
+    //     border-left-style: none;
+    //   }
+    // }
+
+    // &:nth-child(even) {
+    //   grid-column: span 4;
+
+    //   &:before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     border: 2px dotted $violet-bgc; // Цвет и стиль границы карточки
+    //     border-radius: 30px;
+    //     top: 100%;
+    //     right: 130%;
+    //     transform: translate(-50%, -50%);
+    //     z-index: 1; // Помещаем ::before под контент
+    //   }
+    // }
+
+
+  }
+
+  @include onDesktop {
+    &:nth-child(odd) {
+      grid-column: 1 / span 5;
+    }
+
+    &:nth-child(even) {
+      margin-top: 132px;
+      grid-column: 7 / span 5;
+    }
+  }
+
+  text-align: left;
+  
+  border: 2px solid $violet-bgc;
+  border-radius: 30px;
+
+  &__number {
+    @include museo-sans();
+    font-size: 15px;
+    line-height: 18px;
+
+    color: $violet-bgc;
+
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    @include headers-style();
+    font-size: 24px;
+    line-height: 28.8px;
+
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    @include montserrat-400();
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

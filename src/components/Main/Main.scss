@@ -1,0 +1,224 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/normalize.scss';
+@import '../../utils/vars.scss';
+
+.main {
+  max-width: 100%;
+  background-color: $white;
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include onTablet {
+   gap: 120px;
+  }
+
+  @include onDesktop {
+    gap: 140px;
+  }
+
+  &__title {
+    @include headers-style();
+    font-weight: bold;
+    text-align: left;
+    font-size: 40px;
+    line-height: 44px;
+
+    @include onTablet {
+      font-size: 56px;
+      line-height: 66px;
+    }
+
+    &--important {
+      position: relative;
+
+      @include has-highlight();
+      
+    }
+
+    &--tablet-desktop {
+      display: none;
+
+      @include onTablet {
+        display: block;
+        margin-top: 40px;
+        font-size: 56px;
+        line-height: 66px;
+      }
+
+      @include onDesktop {
+        width: 200%;
+      }
+    }
+
+    &--phone {
+      display: block;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+  }
+
+  &__cards-container {
+    margin: 32px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    justify-content: center;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+
+      margin-top: 48px;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(12, 1fr);
+
+      margin-top: 60px;
+    }
+  }
+}
+
+.getting-started-block {
+  @include inline-padding();
+}
+
+.people-love-block {
+  @include inline-padding();
+
+  @include onTablet {}
+}
+
+.contact-us {
+
+  &--block {
+    
+  @include onTablet {
+    grid-column: 2 / span 6; 
+    justify-self: center; 
+  }
+
+  @include onDesktop {
+    grid-column: 1 / span 6;
+  }
+
+  }
+  &--wrapper {
+    @include inline-padding();
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+    @include onTablet {
+      grid-column: 2 / span 4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / span 5;
+
+      align-items: start;
+    }
+  }
+
+  &__header {
+    @include headers-style();
+    font-size: 40px;
+    line-height: 44px;
+    text-align: left;
+
+    @include onTablet {
+      font-size: 56px;
+    }
+  }
+
+  &__info {
+    @include montserrat-400();
+    font-size: 18px;
+    line-height: 30px;
+
+    text-align: left;
+  }
+
+  &__credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &--header {
+      @include museo-sans();
+      font-size: 15px;
+      line-height: 16px;
+
+      text-align: left;
+    }
+
+    &--contacts {
+      @include montserrat-400();
+      font-size: 16px;
+      line-height: 27px;
+
+      text-align: left;
+    }
+  }
+
+  &__contacts-wrapper {
+    @include montserrat-400();
+    font-size: 16px;
+    line-height: 27px;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+  }
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts-wrapper {
+  @include violet-layout(0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  padding-block: 48px;
+
+  
+  @include onTablet {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(12, 1fr);
+  
+  }
+
+}
+
+.callback {
+  @include onTablet {
+    grid-column: 2 / span 6;
+  }
+
+  @include onDesktop {
+    grid-column: 7 / span 6;
+    padding-bottom: 0;
+  }
+}
